@@ -12,15 +12,20 @@
 
 <body>
     <div action="/register" class="container">
-        <h1>This is the registration page</h1>
+        <h1>Create an account</h1>
+        {% if error %}
+        <p class="error">{{error}}</p>
+        {% endif %}
         <form method="post">
             <div class="mb-3">
                 <label for="registrationUsernameInput1" class="form-label">Username</label>
-                <input name="registrationUsernameInput1" type="username" class="form-control" id="registrationUsernameInput1" aria-describedby="usernameHelp">
+                <input name="registrationUsernameInput1" type="username" class="form-control"
+                    id="registrationUsernameInput1" aria-describedby="usernameHelp">
             </div>
             <div class="mb-3">
                 <label for="registrationPasswordInput1" class="form-label">Password</label>
-                <input name="registrationPasswordInput1" type="password" class="form-control" id="registrationPasswordInput1" aria-describedby="passwordHelp">
+                <input name="registrationPasswordInput1" type="password" class="form-control"
+                    id="registrationPasswordInput1" aria-describedby="passwordHelp">
             </div>
             <button type="submit" class="btn btn-primary">Register</button>
         </form>
